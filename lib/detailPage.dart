@@ -13,38 +13,30 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       bottomNavigationBar: Container(
           height: 55,
-          margin: EdgeInsets.only(left:20,right:20),
+          margin: EdgeInsets.only(left: 20, right: 20, bottom: 5),
           alignment: Alignment.center,
-          // child: Text("data"),
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        bottom: MediaQuery.of(context).viewInsets.bottom),
-                    child: TextField(
-                      maxLines: 3,
-                      autofocus: false,
-                      showCursor: false,
-                      decoration: InputDecoration(
-                        // hintText: "Send a Comment",
-                        // labelText: "Send a Comments",
-                        hintText: "hello",
-                        labelStyle: TextStyle(
-                          // textBaseline: TextBaseline.alphabetic,
-                          color: Colors.black,
-                        ),
-                        // fillColor: Colors.blue,
-                        focusedBorder: InputBorder.none,
+                  child: TextField(
+                    maxLines: 3,
+                    autofocus: false,
+                    showCursor: false,
+                    decoration: InputDecoration(
+                      hintText: "hello",
+                      border: InputBorder.none,
+                      labelStyle: TextStyle(
+                        color: Colors.black,
                       ),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                      focusedBorder: InputBorder.none,
                     ),
                   ),
                 ),
@@ -69,28 +61,29 @@ class _DetailPageState extends State<DetailPage> {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30),
                       bottomRight: Radius.circular(30)),
-                  // image: DecorationImage(image: AssetImage("images/pic2.png"),);
                 ),
                 child: Stack(
                   children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        IconButton(
-                          icon: Icon(Icons.keyboard_backspace),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                        ),
-                        CircleAvatar(
-                            radius: 20,
-                            backgroundImage: AssetImage("images/pic5.jpeg")
-                            // child: Text("A"),
-                            ),
-                        IconButton(
-                            icon: Icon(Icons.more_horiz),
-                            onPressed: () => debugPrint("p"))
-                      ],
+                    Padding(
+                      padding:  EdgeInsets.only(top:5.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          IconButton(
+                            icon: Icon(Icons.keyboard_backspace),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                          CircleAvatar(
+                              radius: 20,
+                              backgroundImage: AssetImage("images/pic5.jpeg")
+                              ),
+                          IconButton(
+                              icon: Icon(Icons.more_horiz),
+                              onPressed: () => debugPrint("p"))
+                        ],
+                      ),
                     ),
                     Positioned(
                       left: 50,
@@ -141,7 +134,7 @@ class _DetailPageState extends State<DetailPage> {
               ),
               SizedBox(height: 25),
               Padding(
-                padding:  EdgeInsets.only(left:20.0,right: 20),
+                padding: EdgeInsets.only(left: 20.0, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,8 +142,6 @@ class _DetailPageState extends State<DetailPage> {
                     CircleAvatar(
                         radius: 15,
                         backgroundImage: AssetImage("images/pic5.jpeg")
-                        // child: Image.asset("images/pic5.jpeg"),
-                        // child:  Image(image: AssetImage("images/pic5.jpeg")),
                         ),
                     SizedBox(width: 10),
                     Expanded(
@@ -166,16 +157,13 @@ class _DetailPageState extends State<DetailPage> {
               ),
               SizedBox(height: 15),
               Padding(
-                padding:  EdgeInsets.only(left:20.0,right: 20),
-
+                padding: EdgeInsets.only(left: 20.0, right: 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     CircleAvatar(
                         radius: 15,
                         backgroundImage: AssetImage("images/pic5.jpeg")
-                        // child: Image.asset("images/pic5.jpeg"),
-                        // child:  Image(image: AssetImage("images/pic5.jpeg")),
                         ),
                     SizedBox(width: 10),
                     Expanded(
@@ -191,15 +179,13 @@ class _DetailPageState extends State<DetailPage> {
               ),
               SizedBox(height: 15),
               Padding(
-                padding:  EdgeInsets.only(left:20.0,right: 20),
+                padding: EdgeInsets.only(left: 20.0, right: 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     CircleAvatar(
                         radius: 15,
                         backgroundImage: AssetImage("images/pic5.jpeg")
-                        // child: Image.asset("images/pic5.jpeg"),
-                        // child: Image(image: AssetImage("images/pic5.jpeg")),
                         ),
                     SizedBox(width: 10),
                     Expanded(
@@ -215,15 +201,13 @@ class _DetailPageState extends State<DetailPage> {
               ),
               SizedBox(height: 15),
               Padding(
-                padding:  EdgeInsets.only(left:20.0,right: 20),
+                padding: EdgeInsets.only(left: 20.0, right: 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     CircleAvatar(
                         radius: 15,
                         backgroundImage: AssetImage("images/pic5.jpeg")
-                        // child: Image.asset("images/pic5.jpeg"),
-                        // child:  Image(image: AssetImage("images/pic5.jpeg")),
                         ),
                     SizedBox(width: 10),
                     Expanded(

@@ -21,13 +21,10 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Row(
         children: <Widget>[
           Container(
-            // height: 310,
             width: 200,
             decoration: BoxDecoration(
               color: Colors.purple[100],
-              // color: furnitureItem.cls,
               borderRadius: BorderRadius.circular(10),
-              //  image: DecorationImage(image: AssetImage("images/pic2.png"))
             ),
             child: Stack(
               children: <Widget>[
@@ -43,15 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                // Container(
-                //     height: 200,
-                //     // margin: EdgeInsets.only(left:50),
-                //     decoration: BoxDecoration(
-                //       color: Colors.blue,
-                //         image: DecorationImage(
-                //             image: AssetImage(furnitureItem.imageUrl),fit: BoxFit.contain)),
-                //     // child: Text("data"),
-                //   ),
                 Positioned(
                   bottom: 20,
                   left: 30,
@@ -88,14 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       bottomNavigationBar: Container(
           height: 60,
-          // color: Colors.redAccent,
           margin: EdgeInsets.only(bottom: 10, right: 10, left: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
                   width: 60,
-                  // color: Colors.blueGrey,
                   decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(10)),
@@ -114,7 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   )),
               Container(
                   width: 60,
-                  // color: Colors.blueGrey,
                   decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(10)),
@@ -158,21 +143,16 @@ class _MyHomePageState extends State<MyHomePage> {
         physics: ScrollPhysics(),
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(left: 20.0),
+            padding: EdgeInsets.only(left: 20.0,top:5),
             child: Column(
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(left: 15.0),
                   child: Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       CircleAvatar(
                         radius: 30,
                         backgroundImage: AssetImage("images/pic5.jpeg"),
-                        // Image.asset("images/pic5.jpeg",),
-                        // child: Image(
-                        //   image: AssetImage("images/pic1.png"),
-                        // ),
                       ),
                       SizedBox(width: 30),
                       Column(
@@ -239,7 +219,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         "see all...",
                         style: TextStyle(color: Colors.blue),
                       ),
-                      // IconButton(icon: null, onPressed: null)
                     ],
                   ),
                 ),
@@ -250,10 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       CircleAvatar(
                           radius: 15,
-                          backgroundImage: AssetImage("images/pic5.jpeg")
-                          // child: Image.asset("images/pic5.jpeg",fit: BoxFit.fill,),
-                          // child:  Image(image: AssetImage("images/pic5.jpeg"),fit:BoxFit.cover),
-                          ),
+                          backgroundImage: AssetImage("images/pic5.jpeg")),
                       SizedBox(width: 10),
                       Expanded(
                         child: Text(
